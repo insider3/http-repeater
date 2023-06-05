@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTTP Request Sender</title>
+  </head>
+  <body>
+    <h1>HTTP Request Sender</h1>
+
+    <form action="/sendRequest" method="POST">
+      <label for="url">URL:</label>
+      <input type="text" id="url" name="url" placeholder="example.com" required>
+      <label for="path">Path:</label>
+      <input type="text" id="path" name="path" placeholder="/api/endpoint">
+
+      <label for="params">Parameters:</label>
+      <input type="text" id="params" name="params" placeholder="param1=value1&param2=value2">
+
+
+      <hr>
+
+      <label for="method">Request Method:</label>
+      <select id="method" name="method">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="PATCH">PATCH</option>
+        <option value="DELETE">DELETE</option>
+        <option value="OPTIONS">OPTIONS</option>
+      </select>
+
+      <hr>
+
+      <label for="headers">Headers:</label>
+      <textarea id="headers" name="headers" placeholder="header1:value1, header2:value2" required></textarea>
+
+      <hr>
+
+      <label for="numRequests">Number of Requests:</label>
+      <input type="number" id="numRequests" name="numRequests" min="1" required>
+
+      <button type="submit">Send Requests</button>
+    </form>
+  </body>
+</html>
